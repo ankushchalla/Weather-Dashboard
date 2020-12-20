@@ -1,0 +1,27 @@
+.jumbotron {
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+    background-color: rgba(7, 44, 80);
+    border-radius: .3rem;
+    
+  }  
+
+h1 {
+    background-image: -webkit-linear-gradient(45deg, #f04636, #faa93f);
+    background-image: linear-gradient(45deg, #f04636, #faa93f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+.add-border {
+    border: 1px solid black;
+}
+  
+.list-group-item {
+  text-transform: capitalize;
+}
+
+/* .list-group-item, #search-city {
+    border: 1px solid rgba(7, 44, 80);
+} */

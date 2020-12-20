@@ -1,2 +1,12 @@
 # Weather-Dashboard
-Search current and future weather conditions. 
+
+## Installation
+* HTML file: `index.html`
+* JavaScript file: `main.js`
+* CSS file: `style.css`
+
+## Usage
+
+
+## Screenshots
+
