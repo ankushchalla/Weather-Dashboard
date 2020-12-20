@@ -6,7 +6,7 @@
 * CSS file: `style.css`
 
 ## Usage
-
+Visit the webpage [here](https://ankushchalla.github.io/Weather-Dashboard/) in Google Chrome. 
 
 ## Screenshots
 
