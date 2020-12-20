@@ -23,7 +23,7 @@ function getWeather(cityName) {
     }
     
     var apiKey = "a0e1b9a2b622bab0e9cc16737109dcfb";
-    var url = `http://api.openweathermap.org/data/2.5/weather?q=${city.name}&appid=${apiKey}`;
+    var url = `https://api.openweathermap.org/data/2.5/weather?q=${city.name}&appid=${apiKey}`;
     $("#weather-col").html("");
     $.ajax({
         url: url,
@@ -35,7 +35,7 @@ function getWeather(cityName) {
         city.wind = response.wind.speed;
 
         // UV requires seperate API call.
-        var UVurl = `http://api.openweathermap.org/data/2.5/uvi?lat=${response.coord.lat}&lon=${response.coord.lon}&appid=${apiKey}`;
+        var UVurl = `https://api.openweathermap.org/data/2.5/uvi?lat=${response.coord.lat}&lon=${response.coord.lon}&appid=${apiKey}`;
         $.ajax({
             url: UVurl,
             method: "GET"
@@ -61,7 +61,7 @@ function getWeather(cityName) {
 // Get 5-day forecast, add info to city object, and display.
 function getFuture(city) {
     var apiKey = "a0e1b9a2b622bab0e9cc16737109dcfb";
-    var url = `http://api.openweathermap.org/data/2.5/forecast?q=${city.name}&units=imperial&appid=${apiKey}`;    
+    var url = `https://api.openweathermap.org/data/2.5/forecast?q=${city.name}&units=imperial&appid=${apiKey}`;    
     $.ajax({
         url: url,
         type: "GET"
@@ -81,7 +81,7 @@ function getFuture(city) {
                 if (maxTemp < weather[j].main.temp) {
                     maxTemp = weather[j].main.temp;
                     var icon = weather[j].weather[0].icon;
-                    iconURL = `http://openweathermap.org/img/wn/${icon}@2x.png`
+                    iconURL = `https://openweathermap.org/img/wn/${icon}@2x.png`
                 }
                 if (maxHumid < weather[j].main.humidity) {
                     maxHumid = weather[j].main.humidity;
