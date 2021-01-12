@@ -1,0 +1,117 @@
+/* If you see any height rules and wonder why they're there, they're
+   probably there for vertical alignment reasons. */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    background-image: url("./blue-sky-1.jpg");
+    background-attachment: fixed;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    /* background-position: bottom; */
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+
+    /* Enabling horizontal scrolling on five-day cards. */
+    overflow-x: auto;
+}
+
+.home {
+    position: fixed;
+    z-index: 2;
+    align-self: flex-start;
+    margin-left: 10vw;
+    margin-top: 3%;
+    font-size: xx-large;
+    padding: 5px;
+    background-color: rgb(114, 155, 188, 0);
+    color: white;
+    border: 3px solid white;
+    border-radius: 15px;
+    outline: none;
+}
+
+.home:active {
+    border: 5px solid white;
+}
+
+.box {
+    /* Flex boxes shrink to fit parent by default, we don't want that. */
+    flex-shrink: 0;
+    border-radius: 15px;
+    width: 350px;
+    height: 450px;
+    margin: 0px 50px;
+    color: #27587D;
+    background-color:rgb(184, 222, 253, .4);
+    border: 3px solid white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#day-0 {
+    margin-left: 10vw;
+}
+
+#day-4 {
+    margin-right: 10vw;
+}
+
+.space-hack {
+    color: rgb(114, 155, 188, 0);
+}
+
+.temp-day {
+    display: flex;
+    justify-content: space-between;
+}
+
+.temp {
+    font-family: 'Roboto Slab', serif;
+    margin-left: 10%;
+    margin-top: 3%;
+    font-size: 110px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.conditions, .humidity, .day {
+    margin-left: 10%;
+}
+
+.conditions {
+    margin-top: 50%;
+    font-weight: 400;
+    font-size: 47px;
+    text-transform: capitalize;
+}
+
+/* .humidity, .wind {
+    margin-left: 10%;
+} */
+
+.humidity {
+    margin-top: 3%;
+    font-size: 40px;
+}
+
+.day {
+    font-family: 'Roboto Slab', serif;
+    font-size: large;
+    margin-top: 7%;
+    margin-right: 7%;
+    text-align: right;
+}
+

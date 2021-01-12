@@ -1,0 +1,6 @@
+
+function openHome() {
+
+}
+
+export { openHome };

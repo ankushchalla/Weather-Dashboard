@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+  }
+
+body {
+    background-image: url("./blue-sky-1.jpg");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #27587D;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 3vw;
+    border: 3px solid white;
+    border-radius: 15px;
+    width: 33vw;
+    height: 30vw;
+
+    background-color: rgb(207, 230, 248, .20);
+}
+
+#temp-today {
+    font-family: 'Roboto Slab', serif;
+    font-size: 170px;
+    margin-left: 5%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    font-weight: 300;
+    margin-left: 5%;
+    margin-bottom: 7%;
+}
+
+#conditions {
+    font-weight: 400;
+    font-size: 60px;
+    text-transform: capitalize;
+
+    margin-bottom: 5%;
+}
+
+#humidity {
+    margin-bottom: 10px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    height: 30vw;
+    justify-content: space-between;
+}
+
+.city-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35vw;
+    height: 10vw;
+    border: 3px solid white;
+    border-radius: 15px;
+
+    background-color: rgba(255, 255, 255, .30);
+}
+
+#city {
+    margin-left: 5%;
+    margin-top: 2%;
+    font-size: 55px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+#date {
+    margin-left: 5%;
+    margin-bottom: 1%;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+#forecastBtn {
+    color: #27587D;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28vh;
+    background-image: linear-gradient(90deg, rgba(207, 230, 248, .75), rgba(255, 255, 255, 0.75));
+    border: 3px solid #27587D;
+    border-radius: 30px;
+    font-size: 40px;
+    padding: 7px 0px;
+    outline: none;
+}
+
+#forecastBtn:active {
+    border: 5px solid white;
+}
+
+
