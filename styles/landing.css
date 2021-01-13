@@ -3,11 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     line-height: 1;
-  }
+}
 
 body {
     background-image: url("./blue-sky-1.jpg");
-    background-size: 100vw;
+    background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
 }
@@ -37,7 +37,8 @@ body {
 
 .heading {
     color: white;
-    font-size: 100px;
+    /* font-size: 100px; */
+    font-size: 6vw;
     font-family: 'Roboto Slab', serif;
     /* text-shadow: 2px 2px #838383; */
 }
@@ -62,6 +63,7 @@ body {
 }
 
 /* Override bootstrap style. */
+
 #search-city:focus {
     outline: none;
     box-shadow: none;
@@ -88,4 +90,35 @@ body {
     background-color: rgba(0, 0, 0, 0);
     color: white;
     border: 0px;
+}
+
+/* phone <= screen-size <= tablet. */
+@media only screen and (max-width: 1024px) {
+    .heading {
+        font-size: 9vw;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .container {
+        align-items: flex-start;
+    }
+    .header {
+        top: 50px;
+    }
+    .heading {
+        font-size: 15vw;
+        text-align: center;
+    }
+    .input-group {
+        margin-top: 3vh;
+    }
+    #search-city {
+        padding-top: 13px;
+        width: 80vw;
+        font-size: xx-small;
+    }
+    #searchBtn {
+        font-size: x-small;
+    }
 }
