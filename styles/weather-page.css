@@ -139,7 +139,7 @@ body {
     .weather-info {
         margin-top: 8vh;
         width: 85vw;
-        height: 70vw;
+        height: auto;
     }
     #temp-today {
         font-size: 30vw;
@@ -162,11 +162,15 @@ body {
     }
     .city-date {
         width: 75vw;
-        height: 30vw;
+        height: auto;
     }
     #city, #date {
         font-size: 8vw;
         padding-bottom: 5px;
+    }
+
+    #city {
+        font-size: 10vw;
     }
     #forecastBtn {
         margin-top: 2vh;

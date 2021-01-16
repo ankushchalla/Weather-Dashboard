@@ -12,9 +12,8 @@
 body {
     background-image: url("./blue-sky-1.jpg");
     background-attachment: fixed;
-    background-size: 100vw;
+    background-size: cover;
     background-repeat: no-repeat;
-    /* background-position: bottom; */
     min-height: 100vh;
 }
 
@@ -98,10 +97,6 @@ body {
     text-transform: capitalize;
 }
 
-/* .humidity, .wind {
-    margin-left: 10%;
-} */
-
 .humidity {
     margin-top: 3%;
     font-size: 40px;
@@ -115,3 +110,31 @@ body {
     text-align: right;
 }
 
+/* Mobiles */
+@media only screen and (max-width: 426px) {
+    .container {
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .box, #day-0, #day-4 {
+        margin: 2vh 0;
+        align-self: center;
+        width: 80vw;
+        height: auto;
+    }
+    .conditions {
+        margin-top: 10%;
+        line-height: 1;
+    }
+    .home {
+        position: relative;
+        margin-bottom: 3%;
+        /* margin-left: 2.5vw; */
+    }
+    .humidity {
+        line-height: 1;
+        padding-bottom: 2vh;
+    }
+
+}

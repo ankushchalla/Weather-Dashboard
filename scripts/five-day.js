@@ -10,11 +10,6 @@ $('.container').on('mousewheel DOMMouseScroll', function(event){
 });
 
 function main() {
-    let home = $("<button>").addClass("home").append($("<i>").addClass("fa fa-home"));
-    $(".container").append(home);
-    $(".home").click(function() {
-        location.reload();
-    })
     getFuture("Portland");
 }
 

@@ -36,7 +36,9 @@ function getFuture(city) {
     })
 }
 
+// Adds five day forecast info onto screen.
 function buildFuture(fiveDay) {
+    addHome();
     for (let i = 0; i < fiveDay.length; i++) {
         let card = $("<div>").addClass("box").attr("id", `day-${i}`);
         let tempAndDay = $("<div>").addClass("temp-day");
@@ -54,7 +56,6 @@ function buildFuture(fiveDay) {
     // This is hacky, look for better solution.
     $(".container").append($("<div>").addClass("space-hack").text("`"));
     horizScrollOn();
-    addHome();
     
 }
 
