@@ -1,6 +1,0 @@
-
-function openHome() {
-
-}
-
-export { openHome };
