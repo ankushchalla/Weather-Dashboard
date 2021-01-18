@@ -22,7 +22,26 @@ body {
     align-items: center;
 }
 
+.home {
+    margin-left: 3vw;
+    position: relative;
+    top: -9vh;
+    font-size: xx-large;
+    padding: 3px 5px;
+    background-color: rgb(114, 155, 188, 0);
+    color: white;
+    border: 3px solid white;
+    border-radius: 15px;
+    outline: none;
+}
+
+.home:active {
+    border: 5px solid white;
+}
+
 .weather-info {
+    position: relative;
+    top: -4vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -141,6 +160,11 @@ body {
         width: 85vw;
         height: auto;
     }
+    .home {
+        position: relative;
+        top: 1vh;
+        /* margin-left: 2.5vw; */
+    }
     #temp-today {
         font-size: 30vw;
     }
@@ -158,7 +182,7 @@ body {
         align-self: flex-start;
         /* 100 - 85 / 2 to kind of align with weather-info. */
         margin-left: 8.5vw;
-        margin-top: 3vh;
+        margin-top: 1vh;
     }
     .city-date {
         width: 75vw;

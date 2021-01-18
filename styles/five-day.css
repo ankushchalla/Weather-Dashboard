@@ -26,14 +26,17 @@ body {
     overflow-x: auto;
 }
 
-.home {
+.button-container {
     position: fixed;
     z-index: 2;
     align-self: flex-start;
     margin-left: 10vw;
     margin-top: 3%;
+}
+
+.home {
     font-size: xx-large;
-    padding: 5px;
+    padding: 3px 5px;
     background-color: rgb(114, 155, 188, 0);
     color: white;
     border: 3px solid white;
@@ -43,6 +46,19 @@ body {
 
 .home:active {
     border: 5px solid white;
+}
+
+.back {
+    position: relative;
+    top: 3px;
+    margin-left: 7px;
+    font-size: x-large;
+    padding: 3px 5px;
+    background-color: rgb(114, 155, 188, 0);
+    color: white;
+    border: 3px solid white;
+    border-radius: 15px;
+    outline: none;
 }
 
 .box {
@@ -127,10 +143,9 @@ body {
         margin-top: 10%;
         line-height: 1;
     }
-    .home {
+    .button-container {
         position: relative;
         margin-bottom: 3%;
-        /* margin-left: 2.5vw; */
     }
     .humidity {
         line-height: 1;

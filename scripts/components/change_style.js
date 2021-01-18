@@ -1,6 +1,6 @@
 
-function changeStyle(oldLink, newLink) {
-    $(`link[href='${oldLink}']`).remove();
+function changeStyle(startsWith, newLink) {
+    $(`link[href^='${startsWith}']`).remove();
     let newStyle = $("<link>").attr({
         rel: "stylesheet",
         href: newLink

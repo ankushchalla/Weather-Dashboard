@@ -3,14 +3,17 @@ import { changeStyle } from "./components/change_style.js"
 
 function main() {
     let cityName = $("#search-city").val();
+    console.log("city", cityName);
     $(".container").empty();
-    changeStyle("./styles/landing.css", "./styles/weather-page.css");
+    changeStyle("./styles", "./styles/weather-page.css");
     getWeather(cityName);
 }
 
-$("#form").on("submit", function(event) {
+$("form").on("submit", function(event) {
     event.preventDefault();
     main();
 });
+
+export { main };
 
 

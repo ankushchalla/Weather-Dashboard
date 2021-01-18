@@ -1,7 +1,10 @@
+import { getWeather } from "../open_weather.js";
+import { changeStyle } from "../change_style.js";
+import { buildLanding } from "../Builders/build_landing.js";
 
 // Adds five day forecast info onto screen.
-function buildFuture(fiveDay) {
-    addHome();
+function buildFuture(fiveDay, cityName) {
+    addButtons(cityName);
     for (let i = 0; i < fiveDay.length; i++) {
         let card = $("<div>").addClass("box").attr("id", `day-${i}`);
         let tempAndDay = $("<div>").addClass("temp-day");
@@ -22,11 +25,20 @@ function buildFuture(fiveDay) {
 
 }
 
-function addHome() {
+function addButtons(cityName) {
+    let bttnContainer = $("<div>").addClass("button-container");
     let home = $("<button>").addClass("home").append($("<i>").addClass("fa fa-home"));
-    $(".container").append(home);
-    $(".home").click(function () {
-        location.reload();
+    let back = $("<button>").addClass("back").text("return");
+    $(".container").append(bttnContainer.append(home, back));
+    home.click(function () {
+        $(".container").empty();
+        changeStyle("./styles", "./styles/landing.css");
+        buildLanding();
+    })
+    back.click(function () {
+        $(".container").empty();
+        changeStyle("./styles", "./styles/weather-page.css");
+        getWeather(cityName);
     })
 }
 

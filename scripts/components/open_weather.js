@@ -18,9 +18,9 @@ async function getWeather(cityName) {
 
     $("#forecastBtn").click(async function () {
         $(".container").empty();
-        changeStyle("./styles/weather-page.css", "./styles/five-day.css")
+        changeStyle("./styles", "./styles/five-day.css");
         let fiveDay = await getFuture(name);
-        buildFuture(fiveDay);
+        buildFuture(fiveDay, name);
     })
 }
 
