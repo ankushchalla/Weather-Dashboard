@@ -17,7 +17,7 @@ function getWeatherToday(name) {
         $.ajax({
             url: url,
             method: "GET"
-        }).then(function (response) {
+        }).done(function (response) {
             // Get current weather data.
             let date = new Date(response.dt * 1000).toLocaleDateString('en-US', {
                 weekday: 'long',  
@@ -38,6 +38,14 @@ function getWeatherToday(name) {
                 city.UV = UVresponse.value;
                 resolve(city);
             });
+        }).fail( (xhr, status, error) => {
+            if (xhr.status === 404 || xhr.status === 400) {
+                alert(`The OpenWeather API responded with a ${xhr.status} Error: ${error}. Please try another request.`);
+                location.reload();
+            }
+            else {
+                throw error;
+            }
         });
     });
 }
