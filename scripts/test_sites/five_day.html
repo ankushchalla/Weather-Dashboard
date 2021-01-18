@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&amp;family=Roboto+Slab&amp;display=swap"
+        rel="stylesheet">
+
+
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="../../styles/five-day.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="button-container">
+            <button class="home"><i class="fa fa-home"></i></button>
+            <button class="back">return</button>
+        </div>
+
+        <div class="box" id="day-0">
+            <div class="temp-day">
+                <div class="temp">44°</div>
+                <div class="day">Sun</div>
+            </div>
+            <div class="conditions">clear sky</div>
+            <div class="humidity">Humidity: 80%</div>
+        </div>
+        <div class="box" id="day-1">
+            <div class="temp-day">
+                <div class="temp">42°</div>
+                <div class="day">M</div>
+            </div>
+            <div class="conditions">few clouds</div>
+            <div class="humidity">Humidity: 82%</div>
+        </div>
+        <div class="box" id="day-2">
+            <div class="temp-day">
+                <div class="temp">40°</div>
+                <div class="day">Tu</div>
+            </div>
+            <div class="conditions">clear sky</div>
+            <div class="humidity">Humidity: 85%</div>
+        </div>
+        <div class="box" id="day-3">
+            <div class="temp-day">
+                <div class="temp">36°</div>
+                <div class="day">W</div>
+            </div>
+            <div class="conditions">scattered clouds</div>
+            <div class="humidity">Humidity: 84%</div>
+        </div>
+        <div class="box" id="day-4">
+            <div class="temp-day">
+                <div class="temp">38°</div>
+                <div class="day">Th</div>
+            </div>
+            <div class="conditions">overcast clouds</div>
+            <div class="humidity">Humidity: 86%</div>
+        </div>
+        <div class="space-hack">`</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="./scripts/main.js" type="module"></script>
+
+</body>
+
+</html>

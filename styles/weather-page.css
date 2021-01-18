@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+body {
+    background-image: url("./blue-sky-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #27587D;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home {
+    margin-left: 3vw;
+    position: relative;
+    top: -9vh;
+    font-size: xx-large;
+    padding: 3px 5px;
+    background-color: rgb(114, 155, 188, 0);
+    color: white;
+    border: 3px solid white;
+    border-radius: 15px;
+    outline: none;
+}
+
+.home:active {
+    border: 5px solid white;
+}
+
+.weather-info {
+    position: relative;
+    top: -4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 3vw;
+    border: 3px solid white;
+    border-radius: 15px;
+    width: 33vw;
+    height: 30vw;
+    background-color: rgb(207, 230, 248, .20);
+}
+
+#temp-today {
+    font-family: 'Roboto Slab', serif;
+    /* font-size: 170px; */
+    font-size: 11vw;
+    margin-left: 5%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    /* font-size: 40px; */
+    font-size: 2.7vw;
+    font-weight: 300;
+    margin-left: 5%;
+    margin-bottom: 7%;
+}
+
+#conditions {
+    font-weight: 400;
+    /* font-size: 60px; */
+    font-size: 4vw;
+    text-transform: capitalize;
+    margin-bottom: 5%;
+}
+
+#humidity {
+    margin-bottom: 10px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    /* height is same as weather-info, this makes alignment easier. */
+    height: 30vw;
+}
+
+.city-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35vw;
+    height: 10vw;
+    border: 3px solid white;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, .30);
+}
+
+#city {
+    margin-left: 5%;
+    margin-top: 2%;
+    /* font-size: 55px; */
+    font-size: 3.6vw;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+#date {
+    margin-left: 5%;
+    margin-bottom: 1%;
+    /* font-size: 40px; */
+    font-size: 2.5vw;
+    font-weight: 300;
+}
+
+#forecastBtn {
+    color: #27587D;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 6vh;
+    background-image: linear-gradient(90deg, rgba(207, 230, 248, .75), rgba(255, 255, 255, 0.75));
+    border: 3px solid #27587D;
+    border-radius: 30px;
+    /* font-size: 40px; */
+    font-size: 2.5vw;
+    padding: 7px 0px;
+    outline: none;
+}
+
+#forecastBtn:active {
+    border: 5px solid white;
+}
+
+/* mobile <= screen-size <= tablet. */
+
+@media only screen and (max-width: 1024px) {
+    .weather-info {
+        width: 40vw;
+    }
+    .info-container {
+        margin-right: 5vw;
+    }
+}
+
+/* mobile (and portrait tablets) */
+
+@media only screen and (max-width: 650px) {
+    .container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .weather-info {
+        margin-top: 8vh;
+        width: 85vw;
+        height: auto;
+    }
+    .home {
+        position: relative;
+        top: 1vh;
+        /* margin-left: 2.5vw; */
+    }
+    #temp-today {
+        font-size: 30vw;
+    }
+    .info {
+        margin-right: 8%;
+        margin-top: 5%;
+    }
+    #conditions {
+        font-size: 10vw
+    }
+    #humidity, #UV {
+        font-size: 8vw
+    }
+    .info-container {
+        align-self: flex-start;
+        /* 100 - 85 / 2 to kind of align with weather-info. */
+        margin-left: 8.5vw;
+        margin-top: 1vh;
+    }
+    .city-date {
+        width: 75vw;
+        height: auto;
+    }
+    #city, #date {
+        font-size: 8vw;
+        padding-bottom: 5px;
+    }
+
+    #city {
+        font-size: 10vw;
+    }
+    #forecastBtn {
+        margin-top: 2vh;
+        width: 30vw;
+        font-size: 5vw
+    }
+}
