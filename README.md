@@ -1,5 +1,9 @@
 # Weather-Dashboard
 
+## Description
+Weather-Dashboard interacts with the [OpenWeather API](https://openweathermap.org/api) to display current weather conditions of an inputted city,
+as well as a five-day forecast. 
+
 ## Installation
 * HTML file: `index.html`
 * JavaScript file: `main.js`
