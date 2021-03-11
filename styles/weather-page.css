@@ -29,6 +29,7 @@ body {
     font-size: xx-large;
     padding: 3px 5px;
     color: white;
+    background-color: rgb(114, 155, 188, 0);
     border: 3px solid white;
     border-radius: 15px;
     /* For some reason, removing line 36 makes everything go bonkers. */
