@@ -28,15 +28,16 @@ body {
     top: -9vh;
     font-size: xx-large;
     padding: 3px 5px;
-    background-color: rgb(114, 155, 188, 0);
     color: white;
     border: 3px solid white;
     border-radius: 15px;
+    /* For some reason, removing line 36 makes everything go bonkers. */
     outline: none;
+    transition: font-size .2s;
 }
 
-.home:active {
-    border: 5px solid white;
+.home:hover {
+    font-size: 50px;
 }
 
 .weather-info {
@@ -119,21 +120,22 @@ body {
 
 #forecastBtn {
     color: #27587D;
-    width: 15vw;
+    font-weight: 400;
+    width: fit-content;
     display: flex;
     justify-content: center;
     margin-top: 6vh;
     background-image: linear-gradient(90deg, rgba(207, 230, 248, .75), rgba(255, 255, 255, 0.75));
     border: 3px solid #27587D;
     border-radius: 30px;
-    /* font-size: 40px; */
-    font-size: 2.5vw;
-    padding: 7px 0px;
+    font-size: x-large;
+    padding: 7px 15px;
     outline: none;
+    transition: font-size .2s;
 }
 
-#forecastBtn:active {
-    border: 5px solid white;
+#forecastBtn:hover {
+    font-size: 37px;
 }
 
 /* mobile <= screen-size <= tablet. */
